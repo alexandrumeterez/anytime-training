@@ -1,0 +1,47 @@
+# 18 jobs 
+sweep:
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 512
+    wandb:
+      group: 8x_constant_lr
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3, 3.0e-3, 1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 2500
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    wandb:
+      group: 8x_constant_lr
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3, 3.0e-3, 1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+

@@ -1,0 +1,18 @@
+save_num_unsharded_checkpoints_to_keep: 25
+custom_checkpoint_saving_list: [12500, 25000, 50000, 100000, 200000, 400000,10000, 20000, 40000, 80000, 160000, 320000, 11250, 22500, 45000, 90000, 180000, 360000]
+scheduler:
+  t_warmup: 5000
+
+device_train_microbatch_size: 64 # For H100 with adam
+
+model:
+  # 301m non-embedding params and 368m total params
+  d_model: 1024
+  n_heads: 16
+  mlp_hidden_size: 4096
+  n_layers: 24
+  ema_decay: [0.0, 6.25, 12.5, 25.0, 50.0, 100.0]
+
+# Memory: 44GB
+# 160k tokens / sec or 1.2 batches / sec
+# ~6 hrs per run

@@ -1,0 +1,48 @@
+{
+  "wandb": {
+    "entity": "harvardml",
+    "project": "continual_learning"
+  },
+  "figure_2": {
+    "150M": {
+      "batch_size": 256,
+      "durations": [12500, 25000, 50000, 100000, 200000, 400000],
+      "cosine_envelope": ["zsuh9192", "idqcr8p7", "2pgp1fta", "y3acdfbj", "3k9k39km", "gteps89d"],
+      "constant": "scun6715",
+      "inverse_sqrt": "w8rn770s",
+      "long_cosine": "gteps89d",
+      "wsd": ["vrfvgn6j", "kpzdnzm8", "9nc7s716", "uuiz0owf", "2e2ubvp7", "w8bu2hgg"],
+      "expected": {
+        "warmup_steps": 5000,
+        "constant": {"learning_rate": 0.003, "beta2": 0.99},
+        "inverse_sqrt": {"learning_rate": 0.003, "beta2": 0.98, "offset": 51200},
+        "wsd": {"learning_rate": 0.003, "beta2": 0.99, "final_lr_fraction": 0.1}
+      }
+    },
+    "300M": {
+      "batch_size": 512,
+      "durations": [12500, 25000, 50000, 100000, 200000],
+      "cosine_envelope": ["did2j281", "0cqvryxt", "valdxlu4", "hnontxjl", "fgpwm04c"],
+      "constant": "y9jkb5l2",
+      "inverse_sqrt": "8s819bbk",
+      "long_cosine": "fgpwm04c",
+      "wsd": ["3b8ktppv", "lvm5tuht", "q530qi8n", "php2grgw", "xvwrxk8h"],
+      "expected": {
+        "warmup_steps": 5000,
+        "constant": {"learning_rate": 0.003, "beta2": 0.95},
+        "inverse_sqrt": {"learning_rate": 0.003, "beta2": 0.99, "offset": 51200},
+        "wsd": {"learning_rate": 0.003, "beta2": 0.95, "final_lr_fraction": 0.1}
+      }
+    }
+  },
+  "sweep_groups": {
+    "main_150M": ["chinchilla_32x", "second_sweep_cosine", "8x_anytime_wsd_sweep_decays"],
+    "main_300M": ["fixed_300m_16x_chinchilla", "decay_300m"],
+    "large_batch_150M": ["4k_bsz", "fixed_decay_4kbsz"]
+  },
+  "large_batch": {
+    "batch_size": 4096,
+    "warmup_steps_in_runs": 500,
+    "durations": [782, 1564, 3128, 6256, 12512]
+  }
+}

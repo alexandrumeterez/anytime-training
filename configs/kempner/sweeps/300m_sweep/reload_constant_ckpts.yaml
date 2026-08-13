@@ -1,0 +1,147 @@
+# 18 jobs 
+sweep:
+  #constant w avg
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 512
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_300m/51646684_31/step179999-unsharded
+    wandb:
+      group: fixed_300m_16x_chinchilla
+      run_id: l0tg8zcg
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-4
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 5000
+    max_duration: 200000
+    stop_at: 200000 #16x chinchilla
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 512
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_300m/51646684_32/step179999-unsharded
+    wandb:
+      group: fixed_300m_16x_chinchilla
+      run_id: v76ynvoj
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-4
+      beta_0: 0.9
+      beta_1: 0.99
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 5000
+    max_duration: 200000
+    stop_at: 200000 #16x chinchilla
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 512
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_300m/51646684_33/step179999-unsharded
+    wandb:
+      group: fixed_300m_16x_chinchilla
+      run_id: xfwcytrn
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 5000
+    max_duration: 200000
+    stop_at: 200000 #16x chinchilla
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 512
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_300m/51646684_34/step179999-unsharded
+    wandb:
+      group: fixed_300m_16x_chinchilla
+      run_id: mtdgi77h
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.99
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 5000
+    max_duration: 200000
+    stop_at: 200000 #16x chinchilla
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 512
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_300m/51646684_35/step179999-unsharded
+    wandb:
+      group: fixed_300m_16x_chinchilla
+      run_id: y9jkb5l2
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 5000
+    max_duration: 200000
+    stop_at: 200000 #16x chinchilla
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 512
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_300m/51646684_36/step179999-unsharded
+    wandb:
+      group: fixed_300m_16x_chinchilla
+      run_id: ocdexfbs
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-3
+      beta_0: 0.9
+      beta_1: 0.99
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: 'constant_with_warmup'
+      t_warmup: 5000
+    max_duration: 200000
+    stop_at: 200000 #16x chinchilla

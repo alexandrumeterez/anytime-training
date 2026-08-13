@@ -1,0 +1,293 @@
+# 18 jobs 
+sweep:
+# 16x
+# 18 jobs 
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130399_1/step179999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 200_000
+    stop_at: 200_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_2/step179999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 200_000
+    stop_at: 200_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_3/step179999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 200_000
+    stop_at: 200_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_4/step179999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 200_000
+    stop_at: 200_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_5/step179999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 200_000
+    stop_at: 200_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_6/step179999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 200_000
+    stop_at: 200_000
+# 32x
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130399_1/step359999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_2/step359999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_3/step359999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_4/step359999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_5/step359999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning/48130668_6/step359999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000

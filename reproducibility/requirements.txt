@@ -1,0 +1,6 @@
+matplotlib>=3.8
+pandas>=2.0
+pyarrow>=14
+seaborn>=0.13
+torch>=2.1
+wandb>=0.19

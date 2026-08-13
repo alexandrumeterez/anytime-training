@@ -1,0 +1,32 @@
+# 18 jobs 
+# sqrt w warmup:
+# - (continue from ckpt): 32x - lr = 3e-3 , and beta2 = 0.98, 0.99, at offset=12.5k, 25k
+
+# - 32x - lr = 3e-3 , and beta2 = 0.98, 0.99, at offset=50k
+# - 32x - lr = 1e-3 , and beta2 = 0.98, 0.99, at offset=12.5k, 25k, 50k
+# - 32x - lr = 3e-4, and beta2 = 0.98, 0.99, at offset=12.5k, 25k, 50k
+# so 18 runs
+
+sweep:
+  - device_train_microbatch_size: 32
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-4, 1.0e-3, 3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['inverse_sqrt_with_warmup']
+      t_warmup: 5000
+      offset: [12_800, 25_600, 51_200]
+    max_duration: 400_000
+    stop_at: 400_000

@@ -1,0 +1,167 @@
+sweep:
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_1/step99999-unsharded
+    wandb:
+      group: chinchilla_32x
+      run_id: rmy42v1w
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['constant_with_warmup']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_2/step99999-unsharded
+    wandb:
+      group: chinchilla_32x
+      run_id: sk0nlywf 
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.98
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['constant_with_warmup']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_3/step99999-unsharded
+    wandb:
+      group: chinchilla_32x
+      run_id: vn0v2p6r
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.99
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['constant_with_warmup']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_4/step99999-unsharded
+    wandb:
+      group: chinchilla_32x
+      run_id: yu806vz2
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['constant_with_warmup']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_5/step99999-unsharded
+    wandb:
+      group: chinchilla_32x
+      run_id: vd4bykhr 
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-3
+      beta_0: 0.9
+      beta_1: 0.98
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['constant_with_warmup']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_6/step99999-unsharded
+    wandb:
+      group: chinchilla_32x
+      run_id: scun6715
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-3
+      beta_0: 0.9
+      beta_1: 0.99
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['constant_with_warmup']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-4
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['constant_with_warmup']
+      t_warmup: 5000
+    max_duration: 400_000
+    stop_at: 400_000

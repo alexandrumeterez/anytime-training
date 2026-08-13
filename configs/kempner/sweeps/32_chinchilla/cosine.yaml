@@ -1,0 +1,140 @@
+# 18 jobs 
+sweep:
+  - device_train_microbatch_size: 32
+    save_interval_unsharded: 625
+    num_passes: 1
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-4
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: false
+    scheduler:
+      name: "cosine_with_warmup"
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500 #1x chinchilla
+  - device_train_microbatch_size: 32
+    save_interval_unsharded: 1250
+    num_passes: 1
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-4
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: false
+    scheduler:
+      name: "cosine_with_warmup"
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000 #2x chinchilla
+  - device_train_microbatch_size: 32
+    save_interval_unsharded: 2500
+    num_passes: 1
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-4
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: false
+    scheduler:
+      name: "cosine_with_warmup"
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000 #4x chinchilla
+  - device_train_microbatch_size: 32
+    save_interval_unsharded: 5000
+    num_passes: 1
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: 3.0e-4
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: false
+    scheduler:
+      name: "cosine_with_warmup"
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000 #8x chinchilla
+  - device_train_microbatch_size: 32
+    save_interval_unsharded: 10_000
+    num_passes: 1
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-4, 1.0e-3, 3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: false
+    scheduler:
+      name: "cosine_with_warmup"
+      t_warmup: 5000
+    max_duration: 200000
+    stop_at: 200000 #16x chinchilla
+  - device_train_microbatch_size: 32
+    save_interval_unsharded: 20_000
+    num_passes: 1
+    wandb:
+      group: chinchilla_32x
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-4, 1.0e-3, 3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95, 0.98, 0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: false
+    scheduler:
+      name: "cosine_with_warmup"
+      t_warmup: 5000
+    max_duration: 400000
+    stop_at: 400000 #32x chinchilla

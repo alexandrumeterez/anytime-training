@@ -1,0 +1,26 @@
+# 18 jobs 
+sweep:
+  - device_train_microbatch_size: 32
+    wandb:
+      group: 8x_anytime
+    optimizer:
+      name: adamw
+      learning_rate: [1e-4, 3.0e-4, 1.0e-3, 3.0e-3]
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+      # ema_decay: [100, 50, 25, 12.5, 6.25]
+    scheduler:
+      name: ['inverse_sqrt_with_warmup']
+      t_warmup: 1250
+      offset: [100, 200, 400, 800]
+    max_duration: 100000
+    stop_at: 100000
+

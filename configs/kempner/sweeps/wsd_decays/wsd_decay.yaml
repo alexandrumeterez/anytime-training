@@ -1,0 +1,877 @@
+# 18 jobs 
+sweep:
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_1/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_2/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_3/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_4/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_5/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path:  /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_6/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_7/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_8/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 50
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/46273296_9/step11249-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 12500
+    stop_at: 12500
+
+
+# 2x
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_1/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_2/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_3/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_4/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_5/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path:  /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_6/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_7/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_8/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 100
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/46273296_9/step22499-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 25000
+    stop_at: 25000
+
+
+# 4x
+# 18 jobs 
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_1/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_2/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_3/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_4/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_5/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path:  /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_6/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_7/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_8/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 200
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/46273296_9/step44999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 50000
+    stop_at: 50000
+
+
+# 8x
+# 18 jobs 
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_1/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_2/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_3/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_4/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_5/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path:  /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_6/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [3.0e-3]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_7/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.95]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/45977048_8/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.98]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000
+  - device_train_microbatch_size: 32
+    global_train_batch_size: 256
+    eval_interval: 400
+    load_path: /n/netscratch/sham_lab/Lab/pranavajitnair/continual_learning/46273296_9/step89999-unsharded
+    wandb:
+      group: 8x_anytime_wsd_sweep_decays
+    optimizer:
+      name: adamw
+      learning_rate: [1.0e-2]
+      beta_0: 0.9
+      beta_1: [0.99]
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: ['linear_decay']
+      t_warmup: 5000
+    max_duration: 100000
+    stop_at: 100000

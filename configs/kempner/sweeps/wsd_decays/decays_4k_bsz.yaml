@@ -1,0 +1,756 @@
+sweep:
+#1x 
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_19/step703-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 782
+    stop_at: 782
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_20/step703-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 782
+    stop_at: 782
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_21/step703-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 782
+    stop_at: 782
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_22/step703-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 782
+    stop_at: 782
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_23/step703-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 782
+    stop_at: 782
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_24/step703-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 782
+    stop_at: 782
+#2x 
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_19/step1407-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 1564
+    stop_at: 1564
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_20/step1407-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 1564
+    stop_at: 1564
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_21/step1407-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 1564
+    stop_at: 1564
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_22/step1407-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 1564
+    stop_at: 1564
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_23/step1407-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 1564
+    stop_at: 1564
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_24/step1407-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 1564
+    stop_at: 1564
+#4x 
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_19/step2815-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 3128
+    stop_at: 3128
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_20/step2815-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 3128
+    stop_at: 3128
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_21/step2815-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 3128
+    stop_at: 3128
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_22/step2815-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 3128
+    stop_at: 3128
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_23/step2815-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 3128
+    stop_at: 3128
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_24/step2815-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 3128
+    stop_at: 3128
+#8x 
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_19/step5630-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 6256
+    stop_at: 6256
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_20/step5630-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 6256
+    stop_at: 6256
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_21/step5630-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 6256
+    stop_at: 6256
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_22/step5630-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 6256
+    stop_at: 6256
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_23/step5630-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 6256
+    stop_at: 6256
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_24/step5630-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 6256
+    stop_at: 6256
+#16x 
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_19/step11260-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 12512
+    stop_at: 12512
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_20/step11260-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 12512
+    stop_at: 12512
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_21/step11260-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 12512
+    stop_at: 12512
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_22/step11260-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 12512
+    stop_at: 12512
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_23/step11260-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 12512
+    stop_at: 12512
+  - device_train_microbatch_size: 32
+    num_passes: 1
+    global_train_batch_size: 4096
+    save_num_unsharded_checkpoints_to_keep: 1
+    load_path: /n/netscratch/kempner_sham_lab/Everyone/ameterez/continual_learning_4kbsz/53115559_24/step11260-unsharded
+    wandb:
+      group: decay_4kbsz
+    optimizer:
+      name: adamw
+      learning_rate: 1.0e-3
+      beta_0: 0.9
+      beta_1: 0.95
+      eps: 1.0e-8
+      decouple_weight_decay: false
+      weight_decay: 0.0
+      decay_norm_and_bias: true
+      decay_embeddings: true
+      metrics_log_interval: 100
+    model:
+      use_ema: true
+    scheduler:
+      name: "linear_decay"
+      t_warmup: 500
+    max_duration: 12512
+    stop_at: 12512
