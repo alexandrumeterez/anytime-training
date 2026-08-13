@@ -55,12 +55,14 @@ Carlo. It sets
 
 ```text
 H = diag(1^{-a}, 2^{-a}, ..., d^{-a})
+(w_i^*)^2 = i^{-(b-a)}
 ```
 
 and updates all `d=500000` diagonal second moments using the exact Gaussian
-recursion. It sweeps one fixed learning-rate multiplier per scheduler and
-selects it by mean excess risk over the eight reported checkpoints. Run the
-full experiment on a GPU with:
+recursion. The target is not normalized, so
+`lambda_i (w_i^*)^2 = i^{-b}` exactly. It sweeps one fixed learning-rate
+multiplier per scheduler and selects it by mean excess risk over the eight
+reported checkpoints. Run the full experiment on a GPU with:
 
 ```console
 sbatch synthetics/figure3_exact_recursion.sbatch

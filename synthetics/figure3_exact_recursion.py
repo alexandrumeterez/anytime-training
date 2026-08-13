@@ -56,14 +56,12 @@ CHECKPOINTS = np.array([1000, 2000, 3000, 5000, 8000, 10000, 20000, 50000])
 def make_problem(d: int, a: float, b: float) -> tuple[jax.Array, jax.Array, float]:
     """Return diag(H), diag(E[(w_0-w*)(w_0-w*)^T]), and tr(H).
 
-    We use lambda_i = i^-a, lambda_i (w_i*)^2 proportional to i^-b,
-    w_0 = 0, and normalize ||w*||_2 = 1, matching the original synthetic
-    implementation.
+    We use lambda_i = i^-a, (w_i*)^2 = i^(-(b-a)), and w_0 = 0, so
+    lambda_i (w_i*)^2 = i^-b exactly.
     """
     index = jnp.arange(1, d + 1, dtype=jnp.float64)
     eigenvalues = index ** (-a)
     initial_second_moment = index ** (-(b - a))
-    initial_second_moment /= jnp.sum(initial_second_moment)
     trace = float(jax.device_get(jnp.sum(eigenvalues)))
     return eigenvalues, initial_second_moment, trace
 
