@@ -87,29 +87,77 @@ def make_plot(model: str, envelope: pd.DataFrame, transfer: pd.DataFrame, output
             "mathtext.fontset": "cm",
             "font.family": "sans-serif",
             "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
-            "font.size": 14,
+            "font.size": 18,
         }
     )
     fig, axis = plt.subplots(figsize=(9, 5))
     for tokens in envelope["tokens"]:
         axis.axvline(tokens, color="0.5", linestyle="--", linewidth=1, alpha=0.6)
 
-    durations = sorted(envelope["tuned_duration"], reverse=True)
-    shades = [str(value) for value in mpl.colormaps["Greys"]([0.9, 0.75, 0.6, 0.45, 0.3, 0.2])]
-    for shade, duration in zip(shades, durations):
-        curve = transfer.loc[transfer["tuned_duration"] == duration].sort_values("target_step")
-        multiple = 2 ** envelope["tuned_duration"].sort_values().tolist().index(duration)
-        axis.plot(curve["tokens"], curve["loss"], color=shade, linewidth=3, label=rf"${multiple}\times$")
+    # The shortest-horizon run contributes only its terminal point, which is
+    # already shown by the cosine envelope.  Plot the genuinely transferred
+    # trajectories (2x and longer), matching the submitted figure.
+    durations = sorted(envelope["tuned_duration"], reverse=True)[:-1]
 
-    axis.plot(envelope["tokens"], envelope["loss"], color="#781202", linewidth=3.5, label="Cosine env.")
-    axis.scatter(envelope["tokens"], envelope["loss"], color="#781202", marker="*", s=150, zorder=5)
+    # Plot the envelope first so the legend order matches the paper, while
+    # zorder keeps it visible above the gray transfer trajectories.
+    axis.plot(
+        envelope["tokens"],
+        envelope["loss"],
+        color="#781202",
+        linewidth=3.5,
+        label="Cosine env.",
+        zorder=4,
+    )
+    axis.scatter(
+        envelope["tokens"],
+        envelope["loss"],
+        color="#781202",
+        marker="*",
+        s=150,
+        zorder=5,
+    )
+
+    shade_positions = [0.9, 0.75, 0.6, 0.45, 0.3][: len(durations)]
+    shades = [
+        tuple(value)
+        for value in mpl.colormaps["Greys"](shade_positions)
+    ]
+    all_durations = envelope["tuned_duration"].sort_values().tolist()
+    for shade, duration in zip(shades, durations, strict=True):
+        curve = transfer.loc[transfer["tuned_duration"] == duration].sort_values("target_step")
+        multiple = 2 ** all_durations.index(duration)
+        axis.plot(
+            curve["tokens"],
+            curve["loss"],
+            color=shade,
+            linewidth=3,
+            label=rf"${multiple}\times$",
+            zorder=2,
+        )
+
     axis.set_xscale("log")
     axis.set_xlabel("Tokens")
-    axis.set_ylabel("Validation loss")
-    axis.set_title(model)
+    axis.set_ylabel("Validation Loss")
+    axis.text(
+        0.02,
+        0.06,
+        model,
+        transform=axis.transAxes,
+        fontsize=18,
+        fontweight="bold",
+    )
     axis.grid(True, axis="y", alpha=0.4)
     axis.spines[["top", "right"]].set_visible(False)
-    axis.legend(ncol=min(6, len(durations) + 1), loc="lower center", bbox_to_anchor=(0.5, 1.02), frameon=False)
+    axis.legend(
+        ncol=len(durations) + 1,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 1.02),
+        fontsize=15,
+        frameon=False,
+        handletextpad=0.6,
+        columnspacing=1.2,
+    )
     fig.tight_layout()
     fig.savefig(output.with_suffix(".pdf"), bbox_inches="tight")
     fig.savefig(output.with_suffix(".png"), dpi=220, bbox_inches="tight")
